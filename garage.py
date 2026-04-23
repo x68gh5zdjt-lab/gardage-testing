@@ -13,8 +13,8 @@ def exit_garage(garage, car_id):
     del garage["cars"][car_id]
     return True
 
-def get_available_spots(garage): 
-    pass
+def get_available_spots(garage):
+    return True
 
 def calculate_fee(hours, rate): 
     pass
