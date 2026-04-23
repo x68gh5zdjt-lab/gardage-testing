@@ -38,3 +38,11 @@ def test_exitGarage():
         "cars": {0: 2}
     }
     assert exit_garage(garage, 0) == True
+
+def test_exitGarageCarNotInGarage():
+    garage = {
+        "capacity": 10,
+        "cars": {0: 2}
+    }
+    with pytest.raises(KeyError):
+        exit_garage(garage, 2)
