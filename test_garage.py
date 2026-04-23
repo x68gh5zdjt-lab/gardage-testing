@@ -1,5 +1,9 @@
 import pytest
-from garage.py import enter_garage
+from garage import enter_garage
 
-def test_entergarage():
-    assert enter_garage
+def test_entergaragePass():
+    garage = {
+        "capacity": 10,
+        "cars": {}
+    }
+    assert enter_garage(garage, 0, 2) == True
