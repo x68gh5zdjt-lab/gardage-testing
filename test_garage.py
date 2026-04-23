@@ -54,3 +54,12 @@ def test_get_available_spots():
         "cars": {0: 2}
     }
     assert get_available_spots(garage) == 1
+
+def test_get_available_spots_WhenFull():
+    garage = {
+        "capacity": 1,
+        "cars": {0: 2}
+    }
+    assert get_available_spots(garage) == 0
+
+    
