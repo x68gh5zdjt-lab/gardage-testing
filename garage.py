@@ -14,7 +14,7 @@ def exit_garage(garage, car_id):
     return True
 
 def get_available_spots(garage):
-    return True
+    return max(garage["capacity"] - len(garage["cars"]), 0)
 
 def calculate_fee(hours, rate): 
     pass
