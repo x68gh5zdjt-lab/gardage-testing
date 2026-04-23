@@ -71,3 +71,9 @@ def test_get_available_spots_WhenOverFull():
  
 def test_calculate_fee():
     assert calculate_fee(10, 3) == 30
+ 
+@pytest.mark.parametrize("hours, rate", [
+    (-10, 2),
+    (10, -2),
+    (-10, -2)
+])
