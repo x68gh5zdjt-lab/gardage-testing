@@ -22,3 +22,13 @@ def calculate_fee(hours, rate):
     hType =  type(hours)
     rType = type(rate)
     return round(hours * rate, 2)
+
+@pytest.mark.parametrize("hours, rate", [
+    (-10, 2),
+    (10, -2),
+    (-10, -2)
+])
+ 
+def test_calculate_feeNegatives(hours, rate):
+    with pytest.raises(ValueError):
+        calculate_fee(hours, rate)
