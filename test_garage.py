@@ -31,3 +31,10 @@ def test_entergarageInvalidTimeType():
     }
     with pytest.raises(TypeError):
         enter_garage(garage, 0, "2")
+
+def test_exitGarage():
+    garage = {
+        "capacity": 10,
+        "cars": {0: 2}
+    }
+    assert exit_garage(garage, 0) == True
