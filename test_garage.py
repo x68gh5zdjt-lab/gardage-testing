@@ -1,5 +1,5 @@
 import pytest
-from garage import enter_garage, get_available_spots, calculate_fee
+from garage import enter_garage, get_available_spots, calculate_fee, exit_garage
 
 def test_entergaragePass():
     garage = {
