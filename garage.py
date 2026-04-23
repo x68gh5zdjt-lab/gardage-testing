@@ -21,5 +21,7 @@ def calculate_fee(hours, rate):
         raise ValueError
     hType =  type(hours)
     rType = type(rate)
+    if (not (rType is int or rType is float) or not (hType is int or hType is float)):
+        raise TypeError
     return round(hours * rate, 2)
-
+ 
