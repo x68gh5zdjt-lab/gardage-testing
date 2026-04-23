@@ -46,3 +46,11 @@ def test_exitGarageCarNotInGarage():
     }
     with pytest.raises(KeyError):
         exit_garage(garage, 2)
+
+ 
+def test_get_available_spots():
+    garage = {
+        "capacity": 2,
+        "cars": {0: 2}
+    }
+    assert get_available_spots(garage) == 1
