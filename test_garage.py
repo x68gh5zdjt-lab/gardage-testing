@@ -23,3 +23,11 @@ def test_entergaragealreadyInGarage():
     }
     with pytest.raises(ValueError):
         enter_garage(garage, 0, 2)
+
+def test_entergarageInvalidTimeType():
+    garage = {
+        "capacity": 4,
+        "cars": {}
+    }
+    with pytest.raises(TypeError):
+        enter_garage(garage, 0, "2")
